@@ -1,15 +1,15 @@
 package se.claremont.taf.websupport.webdrivergluecode.positionbasedidentification;
 
-import se.claremont.taf.core.guidriverpluginstructure.PositionBasedIdentification.ElementsList;
-import se.claremont.taf.core.guidriverpluginstructure.PositionBasedIdentification.PositionBasedGuiElement;
 import se.claremont.taf.core.logging.LogLevel;
+import se.claremont.taf.genericguiinteraction.guidriverpluginstructure.PositionBasedIdentification.ElementsList;
+import se.claremont.taf.genericguiinteraction.guidriverpluginstructure.PositionBasedIdentification.PositionBasedGuiElement;
 import se.claremont.taf.websupport.DomElement;
 import se.claremont.taf.websupport.webdrivergluecode.WebInteractionMethods;
 
 import java.util.ArrayList;
 
 @SuppressWarnings("unused")
-public class WebElementList extends ElementsList{
+public class WebElementList extends ElementsList {
     private WebInteractionMethods web = null;
     final ArrayList<String> identificationDescription = new ArrayList<>();
 

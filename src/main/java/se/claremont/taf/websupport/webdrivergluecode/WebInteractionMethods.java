@@ -17,7 +17,7 @@ import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.WebDriver;
 
-import se.claremont.taf.core.guidriverpluginstructure.GuiElement;
+import se.claremont.taf.core.MethodInvoker;
 import se.claremont.taf.core.logging.LogFolder;
 import se.claremont.taf.core.logging.LogLevel;
 import se.claremont.taf.core.support.StringManagement;
@@ -27,9 +27,8 @@ import se.claremont.taf.core.support.tableverification.TableData;
 import se.claremont.taf.core.testcase.TestCase;
 import se.claremont.taf.core.testrun.TestRun;
 
-import se.claremont.taf.javasupport.interaction.GenericInteractionMethods;
-import se.claremont.taf.javasupport.interaction.MethodInvoker;
-
+import se.claremont.taf.genericguiinteraction.ScreenshotManager;
+import se.claremont.taf.genericguiinteraction.guidriverpluginstructure.GuiElement;
 import se.claremont.taf.websupport.ActionResult;
 import se.claremont.taf.websupport.DomElement;
 import se.claremont.taf.websupport.W3CHtmlValidatorService;
@@ -926,7 +925,7 @@ public class WebInteractionMethods  {
      */
     public ActionResult saveDesktopScreenshot(){
         try {
-            GenericInteractionMethods robotSwingInteractionMethods = new GenericInteractionMethods(testCase);
+            ScreenshotManager robotSwingInteractionMethods = new ScreenshotManager(testCase);
             robotSwingInteractionMethods.takeScreenshot();
             return new ActionResult(true, null, this);
         } catch (Exception e){
