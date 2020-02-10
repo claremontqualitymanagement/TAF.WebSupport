@@ -28,7 +28,7 @@
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <selenium-version>3.14.0</selenium-version>
+        <selenium-version>3.141.59</selenium-version>
     </properties>
 
     <licenses>
@@ -101,7 +101,7 @@
         <dependency>
             <groupId>com.github.claremontqualitymanagement</groupId>
             <artifactId>taf.restsupport</artifactId>
-            <version>4.0.5</version>
+            <version>4.0.6</version>
         </dependency>
         <dependency>
             <groupId>com.github.claremontqualitymanagement</groupId>
