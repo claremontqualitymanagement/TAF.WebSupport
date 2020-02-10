@@ -5,7 +5,7 @@
     <groupId>com.github.claremontqualitymanagement</groupId>
     <artifactId>taf.websupport</artifactId>
     <name>TAF Web support</name>
-    <version>4.0.3-SNAPSHOT</version>
+    <version>4.0.3</version>
     <packaging>jar</packaging>
     <description>Module to test and interact with web based systems with test automation framework TAF.</description>
     <url>https://github.com/claremontqualitymanagement/TAF.WebSupport</url>
@@ -14,7 +14,7 @@
         <connection>scm:git:git://github.com/claremontqualitymanagement/TAF.WebSupport.git</connection>
         <developerConnection>scm:git://github.com/claremontqualitymanagement/TAF.WebSupport.git</developerConnection>
         <url>https://github.com/claremontqualitymanagement/TAF.WebSupport</url>
-        <tag>taf.websupport-4.0.0</tag>
+        <tag>taf.websupport-4.0.3</tag>
     </scm>
 
     <developers>
