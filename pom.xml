@@ -19,10 +19,10 @@
 
     <developers>
         <developer>
-            <name>Claremont TAF team</name>
-            <email>jorgen.damberg@claremont.se</email>
-            <organization>Claremont</organization>
-            <organizationUrl>http://www.claremont.se</organizationUrl>
+            <name>Zington TAF team</name>
+            <email>jorgen.damberg@zingtongroup.com</email>
+            <organization>Zington Group</organization>
+            <organizationUrl>https://www.zingtongroup.com</organizationUrl>
         </developer>
     </developers>
 
@@ -101,7 +101,7 @@
         <dependency>
             <groupId>com.github.claremontqualitymanagement</groupId>
             <artifactId>taf.restsupport</artifactId>
-            <version>4.0.6</version>
+            <version>4.0.7</version>
         </dependency>
         <dependency>
             <groupId>com.github.claremontqualitymanagement</groupId>
