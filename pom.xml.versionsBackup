@@ -44,7 +44,7 @@
         <dependency>
             <groupId>io.github.bonigarcia</groupId>
             <artifactId>webdrivermanager</artifactId>
-            <version>3.8.1</version>
+            <version>3.7.1</version>
         </dependency>
         <!-- https://mvnrepository.com/artifact/com.codeborne/phantomjsdriver -->
         <dependency>
@@ -90,7 +90,7 @@
         <dependency>
             <groupId>com.google.guava</groupId>
             <artifactId>guava</artifactId>
-            <version>28.2-jre</version>
+            <version>28.1-jre</version>
         </dependency>
         <!-- https://mvnrepository.com/artifact/com.google.code.gson/gson -->
         <dependency>
@@ -101,28 +101,28 @@
         <dependency>
             <groupId>com.github.claremontqualitymanagement</groupId>
             <artifactId>taf.restsupport</artifactId>
-            <version>4.0.4</version>
+            <version>4.0.3</version>
         </dependency>
         <dependency>
             <groupId>com.github.claremontqualitymanagement</groupId>
             <artifactId>taf.json</artifactId>
-            <version>4.1.2</version>
+            <version>4.1.1</version>
         </dependency>
         <dependency>
             <groupId>com.github.claremontqualitymanagement</groupId>
             <artifactId>taf.core</artifactId>
-            <version>4.2.4</version>
+            <version>4.2.1</version>
         </dependency>
         <dependency>
             <groupId>com.github.claremontqualitymanagement</groupId>
             <artifactId>taf.genericguiinteraction</artifactId>
-            <version>4.1.1</version>
+            <version>4.1.0</version>
         </dependency>
         <!-- https://mvnrepository.com/artifact/net.sourceforge.htmlunit/htmlunit -->
         <dependency>
             <groupId>net.sourceforge.htmlunit</groupId>
             <artifactId>htmlunit</artifactId>
-            <version>2.37.0</version>
+            <version>2.36.0</version>
             <scope>test</scope>
         </dependency>
         <!-- https://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-htmlunit-driver -->
@@ -140,12 +140,12 @@
         <dependency>
             <groupId>org.eclipse.jetty</groupId>
             <artifactId>jetty-servlet</artifactId>
-            <version>9.4.26.v20200117</version>
+            <version>9.4.21.v20190926</version>
         </dependency>        <!-- https://mvnrepository.com/artifact/org.eclipse.jetty/jetty-continuation -->
         <dependency>
             <groupId>org.eclipse.jetty</groupId>
             <artifactId>jetty-continuation</artifactId>
-            <version>9.4.26.v20200117</version>
+            <version>9.4.21.v20190926</version>
         </dependency>
 
         <!-- PDF -->
@@ -153,7 +153,7 @@
         <dependency>
             <groupId>org.apache.pdfbox</groupId>
             <artifactId>pdfbox</artifactId>
-            <version>2.0.18</version>
+            <version>2.0.17</version>
         </dependency>
 
         <!-- Jersey HTTP manager -->
@@ -161,13 +161,13 @@
         <dependency>
             <groupId>org.glassfish.jersey.containers</groupId>
             <artifactId>jersey-container-servlet</artifactId>
-            <version>2.30</version>
+            <version>2.29.1</version>
         </dependency>
         <!-- https://mvnrepository.com/artifact/org.glassfish.jersey/jax-rs-ri -->
         <dependency>
             <groupId>org.glassfish.jersey</groupId>
             <artifactId>jax-rs-ri</artifactId>
-            <version>2.0-rc1</version>
+            <version>2.0-m13-3</version>
         </dependency>
     </dependencies>
 
