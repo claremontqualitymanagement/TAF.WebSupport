@@ -4,7 +4,10 @@ import org.junit.*;
 import org.openqa.selenium.htmlunit.HtmlUnitDriver;
 import se.claremont.taf.core.testcase.TestCase;
 import se.claremont.taf.core.testset.UnitTestClass;
-import se.claremont.taf.restsupport.RestSupport;
+import se.claremont.taf.websupport.utils.SimpleHttpClient;
+
+import java.net.MalformedURLException;
+import java.net.URL;
 
 import static se.claremont.taf.core.testcase.TestCaseResult.ResultStatus.FAILED_WITH_ONLY_NEW_ERRORS;
 import static se.claremont.taf.core.testcase.TestCaseResult.ResultStatus.PASSED;
@@ -29,8 +32,12 @@ public class BrokenLinkCheckerTest extends UnitTestClass {
     }
 
     private boolean internetAccessExist(TestCase testCase) {
-        RestSupport restSupport = new RestSupport(testCase);
-        return (restSupport.responseCodeFromGetRequest("http://www.claremont.se") != null);
+        try {
+            Integer responseCode = SimpleHttpClient.sendHttpGet(new URL("http://www.zingtongroup.com"));
+            return (responseCode != null);
+        } catch (MalformedURLException e) {
+            return false;
+        }
     }
 
     @After

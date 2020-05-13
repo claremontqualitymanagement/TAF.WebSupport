@@ -2,8 +2,11 @@ package se.claremont.taf.websupport.brokenlinkcheck;
 
 import se.claremont.taf.core.logging.LogLevel;
 import se.claremont.taf.core.testcase.TestCase;
-import se.claremont.taf.restsupport.RestSupport;
+import se.claremont.taf.websupport.utils.SimpleHttpClient;
 
+import java.io.IOException;
+import java.net.HttpURLConnection;
+import java.net.URL;
 import java.util.ArrayList;
 
 /**
@@ -41,7 +44,7 @@ public class LinkCheck implements Runnable{
     @Override
     public void run() {
         try{
-            String responseCode = null;
+            int responseCode = 0;
             String[] results = new String[4];
             results[0] = link; // 0 is link
             long startTime = System.currentTimeMillis();
@@ -51,7 +54,7 @@ public class LinkCheck implements Runnable{
                     results[3] = "Mail address. Skipped."; //3 is comment
                     return;
                 }
-                responseCode = new RestSupport(testCase).responseCodeFromGetRequestWithoutLogging(link);
+                responseCode = SimpleHttpClient.sendHttpGet(new URL(link));
             } catch (Exception e) {
                 results[3] = "Error: " + e.getMessage(); //3 is comment
             }

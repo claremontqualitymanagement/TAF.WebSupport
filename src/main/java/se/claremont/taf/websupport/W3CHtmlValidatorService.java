@@ -4,8 +4,11 @@ import se.claremont.taf.core.logging.LogLevel;
 import se.claremont.taf.core.support.SupportMethods;
 import se.claremont.taf.core.testcase.TestCase;
 import se.claremont.taf.json.JsonParser;
-import se.claremont.taf.restsupport.RestSupport;
+import se.claremont.taf.websupport.utils.HttpResponse;
+import se.claremont.taf.websupport.utils.SimpleHttpClient;
 
+import java.net.MalformedURLException;
+import java.net.URL;
 import java.util.ArrayList;
 
 /**
@@ -43,8 +46,12 @@ public class W3CHtmlValidatorService {
     public boolean verifyPageSourceWithW3validator(){
         reportProblemsIfExist();
         if(!isRunnable()) return false;
-        RestSupport rest = new RestSupport(testCase);
-        responseJson = rest.responseBodyFromPostRequest("https://validator.w3.org/nu/?out=json", "text/html; charset=utf-8", pageSource);
+        try {
+            //"text/html; charset=utf-8",
+            responseJson = SimpleHttpClient.postRequst(new URL("https://validator.w3.org/nu/?out=json"), pageSource).body;
+        } catch (MalformedURLException e) {
+            e.printStackTrace();
+        }
         if(responseJson == null){
             testCase.log(LogLevel.EXECUTION_PROBLEM, "Could not get any response from HTML validation service.");
             failed = true;
